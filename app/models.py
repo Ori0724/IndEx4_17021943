@@ -19,7 +19,7 @@ class User(db.Model):
     forecast = db.relationship("forecast")
 
     def __repr__(self):
-        return '<user {}>'.format(self.username, self.email)
+        return '<user {} {}>'.format(self.username, self.email)
 
 
 class forecast(db.Model):
@@ -32,7 +32,7 @@ class forecast(db.Model):
     comment = db.Column(db.Text)
 
     def __repr__(self):
-        return '<forecast {}>'.format(self.forecast, self.forecast_datetime, self.comment)
+        return '<forecast {} {} {}>'.format(self.forecast, self.forecast_datetime, self.comment)
 
 
 
