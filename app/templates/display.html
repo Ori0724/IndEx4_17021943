@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} User information {% endblock %}
+{% block content %}
+    {% if user|length %}
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in user %}
+                <tr>
+                    <td>{{ User.username }}</td>
+                    <td>{{ User.email }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}
